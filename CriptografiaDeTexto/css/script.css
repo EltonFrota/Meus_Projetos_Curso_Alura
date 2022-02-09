@@ -42,6 +42,12 @@ main h2::before {
     border-radius: 8px;
     background: linear-gradient(45deg, #8e2de2, #4a00e0);
 }
+textarea {
+    height: 100px;
+    width: 200px;
+    border: solid #D8D8D8;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -54,7 +60,7 @@ form {
     border:solid rgba(0, 0, 0, 0.2);
     font-size: 0.7rem;
     color: rgba(0, 0, 0, 0.7);
-    height: 2rem;
+    height: 3rem;
 }
 .input-field input::placeholder {
     color: rgba(0, 0, 0, 0.5);
