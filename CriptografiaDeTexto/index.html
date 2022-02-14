@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/script.css">    
+    <link rel="stylesheet" href="css/script.css">
     <title>Criptografia de Texto</title>
 </head>
+
 <body>
-   <!-- <div class="titulo">
+    <!-- <div class="titulo">
     <h1>Criptografia de Textos</h1>
     </div>
     -->
-    <!--Caixa de texto 1-->    
-    <main class="container">
+
+
+    <!--Caixa de texto 1-->
+  <main class="container">
         <h2>Códificar</h2>
         <form action="">
             <div class="input-field">
-                <textarea type="text" name="textoPraCript" id="textoPraCript" placeholder="Digite aqui o seu texto"></textarea>
-            </div>                               
-             <input type="submit" value="Criptografar">
-             <input type="submit" value="Descriptografar">               
+
+                <!--Campo de texto-->
+                <textarea id="texto" type="text" name="textoPraCript" placeholder="Digite aqui o seu texto"></textarea>
+
+                <!--Botões-->
+                <input id="btn-cripto" type="submit" value="Criptografar">
+                <input id="btn-descripto" type="submit" value="Descriptografar">
+
             </div>
         </form>
-    </main>
+    </main> -->
     <!--Fim Caixa de texto 1-->
 
     <!--Caixa de texto 2-->
@@ -32,14 +40,42 @@
         <h2>Resultado</h2>
         <form action="">
             <div class="input-field">
-                <textarea type="text" name="textoPraDescrip" id="textoPraDescrip" placeholder="Digite aqui o seu texto"></textarea>
+                <textarea type="text" name="textoPraDescrip" id="textoPraDescrip"
+                    placeholder="Digite aqui o seu texto"></textarea>
             </div>
             <input type="submit" value="Copiar">
-        </form>    
+        </form>
     </main>
     <!--Fim Caixa de texto 2-->
-    
-    
-    <link rel="stylesheet" href="js/javaScript.js">
+
+
+    <script>
+        var segredos = [5, 7, 10, 2];
+
+        var input = document.getElementById("texto");
+
+        input.focus();
+
+   
+
+        function verifica() {
+            var achou = false;
+            for (var posicao; posicao < segredos.length; contador++) {
+                if (input.value == segredos[posicao]) {
+                    alert("Você ACERTOU!");
+                    achou = true;
+                    break
+                }
+            }
+            if (achou == false){
+                alert("Você EROOU!!!");
+            }
+        }
+
+        var botao = document.getElementById("btn-cripto");
+        botao.onclick = verifica;
+
+    </script>
 </body>
+
 </html>
